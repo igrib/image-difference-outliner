@@ -23,5 +23,3 @@ The approach
 3. Find the difference
 4. Do some smoothing/noise reduction
 5. 
-
-
