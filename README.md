@@ -13,7 +13,8 @@ Part of the game development is making images and the current flow for making th
 
 
 I wanted to make it easier to outline the images and use image processing to help me. The outline is important because it's a cool effect in the app. 
-![Uploading outline_sample.gif…]()
+
+![outline_sample](https://user-images.githubusercontent.com/11786205/201091464-edf338d6-546d-41d1-b6cc-c0a70327e463.gif)
 
 I figured I can do this very easily by taking the difference of the images, then finding the edges, and converting that to a path. Obviously nothing is as straightforward as it seems. 
 
@@ -21,9 +22,15 @@ First problem the original image is a PNG and the modified one is a JPG. I can t
 
 
 The approach
-
 1. Import the two images
 2. Convert them to greyscale
 3. Find the difference
 4. Do some smoothing/noise reduction
-5. 
+5. Find the edges / contours
+6. Convert the contours to SVG paths. 
+  
+
+### Limitations ###
+1. The SVG paths are all straight lines so, curves don't come through as well.
+2. The edge detection is more sensitive than the human eye or find differences where a human eye wouldn't.
+
